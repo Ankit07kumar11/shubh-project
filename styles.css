@@ -1,0 +1,77 @@
+/* General body settings with transparent background and a background image */
+body {
+    margin: 0;
+    padding: 0;
+    background: url("./images/background.jpeg") no-repeat center center; /* Background image */
+    background-size: cover; /* Ensures the image covers the whole background */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container to position both buttons */
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: rgba(184, 175, 175, 0); /* Fully transparent container background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Login button (top-right corner) */
+.login-button {
+    position: absolute;
+    top: 5%; /* Responsive positioning */
+    right: 5%;
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 1em 2em; /* Responsive padding */
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1em; /* Responsive font size */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.login-button:hover {
+    background-color: rgba(208, 198, 198, 0.8); /* Hover effect */
+}
+
+/* Sign In button (centered near the bottom) */
+.sign-in-button {
+    position: absolute;
+    bottom: 5%; /* Responsive positioning */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+    color: #333;
+    border: 2px solid #333;
+    padding: 1.5em 3em; /* Responsive padding */
+    border-radius: 30px;
+    font-size: 1.2em; /* Responsive font size */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.sign-in-button:hover {
+    background-color: rgba(177, 149, 149, 0.8); /* Hover effect */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .login-button, .sign-in-button {
+        padding: 1em; /* Adjust padding for smaller screens */
+        font-size: 0.9em; /* Reduce font size */
+    }
+
+    .sign-in-button {
+        padding: 1.2em 2.5em; /* Adjust padding for smaller screens */
+    }
+}
